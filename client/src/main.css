@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/preflight";
+ */
+@tailwind preflight;
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+@tailwind components;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+ .input {
+ 	@apply appearance-none border w-full py-2 px-3 text-grey-darker;
+ }
+
+ .label {
+ 	@apply block text-grey-darker font-semibold mb-2;
+ }
+
+ .button {
+	@apply font-bold py-2 px-4;
+ }
+
+ .button-primary {
+	@apply bg-blue text-white;
+ }
+
+ .button-primary:hover {
+	@apply bg-blue-dark;
+ }
+
+ .alert {
+	@apply border mb-4 p-4;
+ }
+
+ .alert-danger {
+	@apply border-red-darker text-red-darker bg-red-lightest;
+ }
+
+ .alert-success {
+	@apply border-green-darker text-green-darker bg-green-lightest;
+ }
+
+ .help {
+	@apply text-sm mt-2;
+ }
+
+ .help-danger {
+	@apply text-red-dark;
+ }
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/utilities";
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #3d4852;
+}

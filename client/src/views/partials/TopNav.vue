@@ -1,5 +1,5 @@
 <template>
-    <header class="shadow" :class="[ $auth.check() ? 'px-4 py-2' : 'p-4' ]">
+    <header class="shadow" :class="[ $auth.check() ? 'px-4 py-2' : 'p-4' ]" v-on-clickaway="close">
         <nav class="flex items-center">
             <router-link 
                 :to="{ name: 'home' }"
@@ -35,3 +35,17 @@
         </nav>
     </header>
 </template>
+
+<script>
+    import { mixin as clickaway } from 'vue-clickaway'
+
+    export default {
+        mixins: [ clickaway ],
+
+        methods: {
+            close () {
+                window.events.$emit('dropdown:close')
+            }
+        }
+    }
+</script>

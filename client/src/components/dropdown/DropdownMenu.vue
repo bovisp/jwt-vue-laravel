@@ -28,7 +28,11 @@
 			window.events.$on('dropdown:clicked', (id) => {
 				if (this.dropdownId === id) {
 					this.active = !this.active
+
+					return
 				}
+
+				this.active = false
 			})
 
 			window.events.$on('dropdown:close', () => {

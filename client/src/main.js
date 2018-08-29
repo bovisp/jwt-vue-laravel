@@ -24,7 +24,7 @@ Vue.mixin(Error)
 
 window.events = new Vue()
 
-axios.defaults.baseURL = 'http://codeburst.test/api'
+axios.defaults.baseURL = 'http://jwt-vue-laravel.test/api'
 
 axios.interceptors.response.use(
 	response => {
